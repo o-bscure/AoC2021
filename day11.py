@@ -1,7 +1,7 @@
 import numpy as np
 import sys
 def main():
-    data = open("day11.txt").readlines()
+    data = open("data11.txt").readlines()
     data = np.array([[int(xx) for xx in x.strip()] for x in data])
     ans = solve(data, 100)
     return ans

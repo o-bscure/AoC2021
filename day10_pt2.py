@@ -1,6 +1,6 @@
 import sys
 def main():
-    data = open("day10.txt").readlines()
+    data = open("data10.txt").readlines()
     data = [x.strip() for x in data]
     ans = solve(data)
 

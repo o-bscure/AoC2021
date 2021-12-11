@@ -1,5 +1,5 @@
 def main():
-    data = [list(x.strip()) for x in open("day9.txt").readlines()]
+    data = [list(x.strip()) for x in open("data9.txt").readlines()]
     for i in range(len(data)):
         for j in range(len(data[i])):
             data[i][j] = int(data[i][j])
