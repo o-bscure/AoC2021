@@ -1,0 +1,37 @@
+import sys
+def main():
+    print(flip((13,1), y, 7))
+    sys.exit()
+    data = [x.strip() for x in open("data13.txt").readlines()]
+    coords = []
+    folds = []
+    array = coords
+    for line in data:
+        if line == "":
+            array = folds
+            continue
+        array.append(line)
+    coords = [x.split(",") for x in coords]
+    folds = [x[len("fold along "):].split("=") for x in folds]
+
+    solve(coords, folds)
+
+    return
+
+def solve(coords, folds):
+
+
+    for fold in folds:
+        pass
+
+
+    return
+
+def flip(coord, axis, index):
+    coord_pos = 0 if axis == "x" else 1
+    if coord[coord_pos] > index:
+        coord[coord_pos] = 2*index - coord[coord_pos]
+    return coord
+
+if __name__ == "__main__":
+    print(main())
