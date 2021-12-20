@@ -24,17 +24,7 @@ def solve(adjacent, rules):
             for ii, jj in adj9(i,j):
                 if (ii,jj) not in adj_c:
                     adj_c[(ii,jj)] = 'V'*9
-                '''
-                print("neighbor at ", ii, jj, adj_c[(ii,jj)])
-                input()
-                print("current node ", i, j, adj)
-                input()
-                '''
                 adj_c[(ii,jj)] = str_insert(adj_c[(ii,jj)], new_char, relation(i,j,ii,jj))
-                '''
-                print("new at ", ii, jj, adj_c[(ii,jj)])
-                input()
-                '''
         adjacent = adj_c
         void = '.' if void=='#' else '#'
     count = 0
