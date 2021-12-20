@@ -1,3 +1,4 @@
+import numpy as np
 def main():
     data = open("data7.txt").readline().split(",")
     data = [int(x) for x in data]
@@ -10,6 +11,8 @@ def solve(nums):
     for i, pos in enumerate(nums):
         for j in range(len(positions)):
             positions[j] += abs(j-pos)
+    p = np.array(positions)
+    print(np.where(p == min(p)))
     return min(positions)
 
 
